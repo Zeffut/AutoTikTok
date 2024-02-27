@@ -23,3 +23,6 @@ download_random_video("short_links.csv", "VideosDirPath")
 os.remove(os.path.join("VideosDirPath", "video.mp4"))
 
 print("[+] Setup complete !")
+print("[-] Closing in 5 seconds...")
+time.sleep(5)
+exit()
