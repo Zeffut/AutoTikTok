@@ -12,17 +12,19 @@ def download_random_video(csv_file_path, output_folder):
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download([video_link])
 
+def main():
+    print("[-] Starting setup...")
+    time.sleep(3)
+    channel_url = input("[-] Enter the youtube channel URL you choose : ")
+    get_short_links(channel_url)
+    print("[-] Shorts links saved !")
+    print("[-] Youtube downloader setup...")
+    download_random_video("short_links.csv", "VideosDirPath")
+    os.remove(os.path.join("VideosDirPath", "video.mp4"))
 
-print("[-] Starting setup...")
-time.sleep(3)
-channel_url = input("[-] Enter the youtube channel URL you choose : ")
-short_links = get_short_links(channel_url)
-print("[-] Shorts links saved !")
-print("[-] Youtube downloader setup...")
-download_random_video("short_links.csv", "VideosDirPath")
-os.remove(os.path.join("VideosDirPath", "video.mp4"))
+    print("[+] Setup complete !")
+    print("[-] Closing in 5 seconds...")
+    time.sleep(5)
+    exit()
 
-print("[+] Setup complete !")
-print("[-] Closing in 5 seconds...")
-time.sleep(5)
-exit()
+main()
