@@ -66,7 +66,7 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- ROADMAP -->
 ## Roadmap
 
-- [*] Add setup file
+- [x] Add setup file
 - [ ] Add multiple youtube channels sources
 - [ ] Add telegram messages for error
 - [ ] Add multiple account support
