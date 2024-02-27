@@ -52,8 +52,3 @@ def get_short_links(channel_url, output_csv='short_links.csv'):
         else:
             print("Aucune vidéo trouvée sur la chaîne.")
             return []
-
-# Exemple d'utilisation :
-channel_url = 'https://www.youtube.com/@sanspermissionpodcast'
-short_links = get_short_links(channel_url)
-print(short_links)

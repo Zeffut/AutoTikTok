@@ -1,5 +1,4 @@
 import time
-import subprocess
 import random
 import csv
 import yt_dlp
@@ -8,7 +7,6 @@ from api import tiktok_cli
 from datetime import datetime
 
 def upload(video_name, video_title):
-    print("Envoi de la vidéo...")
     class ArgsNamespace:
         subcommand = "upload"
         users = "zeffut"
@@ -28,7 +26,7 @@ def upload(video_name, video_title):
     tiktok_cli(args)
 
 def download_random_video(csv_file_path, output_folder):
-    print("Téléchargement d'une vidéo aléatoire...")
+    print("Downloading random video...")
     with open(csv_file_path, 'r', newline='', encoding='utf-8') as csvfile:
         reader = csv.reader(csvfile)
         rows = list(reader)
@@ -46,10 +44,9 @@ def download_random_video(csv_file_path, output_folder):
         return video_name
 
 def daily_task():
-    print("Action quotidienne en cours...")
     csv_file_path = "short_links.csv"
     output_folder = "VideosDirPath"
-    tags = " #argent #yomidenzel #buisness #entrepreneur #foryou #fyp #foryoupage #tiktok #oussamaammar #podcast"
+    tags = " #tags #examples"
     title = download_random_video(csv_file_path, output_folder)
     title = clean_title(title) + tags
     upload("video.mp4", title)
