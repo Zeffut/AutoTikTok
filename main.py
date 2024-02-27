@@ -55,9 +55,6 @@ def daily_task():
     upload("video.mp4", title)
     os.remove(os.path.join(output_folder, "video.mp4"))
 
-def get_current_time():
-    return time.strftime("%A %H:%M")
-
 def clean_title(title):
     parties = title.split("#", 1)
     nouveau_titre = parties[0].strip()
@@ -65,27 +62,51 @@ def clean_title(title):
 
 
 def main():
-    heures_minutes_jours = [
-        ('Monday', ['06:00', '10:00', '22:00']),
-        ('Tuesday', ['02:00', '04:00', '09:00']),
-        ('Wednesday', ['07:00', '08:00', '23:00']),
-        ('Thursday', ['09:00', '12:00', '19:00']),
-        ('Friday', ['05:00', '13:00', '15:00']),
-        ('Saturday', ['11:00', '19:00', '20:00']),
-        ('Sunday', ['07:00', '08:00', '16:00']),
-    ]
+    #Best hours for all days
+    Monday = ['06:00', '10:00', '22:00']
+    Tuesday = ['02:00', '04:00', '09:00']
+    Wednesday = ['07:00', '08:00', '23:00']
+    Thursday = ['09:00', '12:00', '19:00']
+    Friday = ['05:00', '13:00', '15:00']
+    Saturday = ['11:00', '19:00', '20:00']
+    Sunday = ['07:00', '08:00', '16:00']
 
     try:
         while True:
-            current_time = get_current_time()
-            for day, times in heures_minutes_jours:
-                if current_time in times:
+            jour = time.strftime("%A")
+            heure = time.strftime("%H:%M")
+            if jour == "Monday":
+                if heure in Monday:
                     daily_task()
-                    print(f"Action quotidienne effectuée pour {day} à {current_time}.")
                     time.sleep(60)
-            time.sleep(10)
-            print("Date : " + current_time)
+            elif jour == "Tuesday":
+                if heure in Tuesday:
+                    daily_task()
+                    time.sleep(60)
+            elif jour == "Wednesday":
+                if heure in Wednesday:
+                    daily_task()
+                    time.sleep(60)
+            elif jour == "Thursday":
+                if heure in Thursday:
+                    daily_task()
+                    time.sleep(60)
+            elif jour == "Friday":
+                if heure in Friday:
+                    daily_task()
+                    time.sleep(60)
+            elif jour == "Saturday":
+                if heure in Saturday:
+                    daily_task()
+                    time.sleep(60)
+            elif jour == "Sunday":
+                if heure in Sunday:
+                    daily_task()
+                    time.sleep(60)
+
+            time.sleep(1)
+            print("Date : " + time.strftime("%H:%M:%S %d/%m/%Y"))
     except KeyboardInterrupt:
-        print("Arrêt du programme.")
+        print("Stopping...")
 
 main()
