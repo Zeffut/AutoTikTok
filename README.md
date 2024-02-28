@@ -26,8 +26,6 @@ Here's why:
 * You don't have to create content
 * You have just to run the script and wait :smile:
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
@@ -60,8 +58,6 @@ _Below is an example of how you can instruct your audience on installing and set
    python3 setup.py
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -70,5 +66,3 @@ _Below is an example of how you can instruct your audience on installing and set
 - [ ] Add multiple youtube channels sources
 - [ ] Add telegram messages for error
 - [ ] Add multiple account support
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>

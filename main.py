@@ -9,7 +9,7 @@ from datetime import datetime
 def upload(video_name, video_title):
     class ArgsNamespace:
         subcommand = "upload"
-        users = "zeffut"
+        users = ""
         video = video_name
         title = video_title
         schedule = 0
