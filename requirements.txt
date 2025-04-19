@@ -28,8 +28,10 @@ tqdm==4.66.2
 trio==0.24.0
 trio-websocket==0.11.1
 typing_extensions==4.9.0
+tiktok_uploader
 undetected-chromedriver @ git+https://github.com/ultrafunkamsterdam/undetected-chromedriver@783b8393157b578e19e85b04d300fe06efeef653
 urllib3==2.2.0
 websockets==12.0
 wsproto==1.2.0
-
+yt_dlp
+pytz
